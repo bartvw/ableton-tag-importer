@@ -1,0 +1,7 @@
+appdirs==1.4.4
+customtkinter==5.2.2
+darkdetect==0.8.0
+lxml==5.1.0
+packaging==24.0
+tk==0.1.0
+tksheet==7.0.6

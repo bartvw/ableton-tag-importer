@@ -1,0 +1,282 @@
+Drums|707,Drum Kit|707
+Drums|808,Drum Kit|808
+Drums|909,Drum Kit|909
+Drums|Amen,
+Drums|Break,
+Drums|Brush,Drums|Snare|Brush
+Drums|Cabasa,Drums|Percussion|Cabasa
+Drums|Clap,Drums|Clap
+Drums|Cuica,Drums|Percussion|Cuica
+Drums|Cymbals|Crash,Drums|Cymbal|Crash
+Drums|Cymbals|HiHat,Drums|Hihat
+Drums|Cymbals|HiHat Closed,Drums|Closed Hihat
+Drums|Cymbals|HiHat Open,
+Drums|Cymbals|Ride,Drums|Cymbal|Crash
+Drums|Darabuka,Drums|Percussion|Darabuka
+Drums|Drum Machine,
+Drums|Guiro,Drums|Percussion|Guiro
+Drums|Hand Drum|Bongo,Drums|Percussion|Bongo
+Drums|Hand Drum|Conga,Drums|Percussion|Conga
+Drums|Hand Drum|Djembe,Drums|Percussion|Djembe
+Drums|Hand Drum|Surdo,Drums|Percussion|Surdo
+Drums|Hand Drum|Timbale,Drums|Percussion|Timbale
+Drums|Kick,Drums|Kick
+Drums|Kit,Drums|Drum Kit
+Drums|Metallic|Agogo,Drums|Percussion|Agogo
+Drums|Metallic|Bell,Drums|Percussion|Bell
+Drums|Metallic|Chimes,Drums|Percussion|Chime
+Drums|Metallic|Cowbell,Drums|Percussion|Cowbell
+Drums|Metallic|Gong,Drums|Percussion|Gong
+Drums|Metallic|Triangle,Drums|Percussion|Triangle
+Drums|Percussion,Drums|Percussion
+Drums|Rim,Drums|Snare|Rim
+Drums|Shaker,Drums|Percussion|Shaker
+Drums|Snare,Drums|Snare
+Drums|Stick,Drums|Stick
+Drums|Tabla,Drums|Percussion|Tabla
+Drums|Taiko,Drums|Percussion|Taiko
+Drums|Tambourine,Drums|Percussion|Tambourine
+Drums|Thud,Percussion|Misc Percussion
+Drums|Timpani,Drums|Percussion|Timpani
+Drums|Tom,Drums|Tom
+Drums|Wooden|Castanet,Drums|Percussion|Castanet
+Drums|Wooden|Clave,Drums|Percussion|Clave
+Drums|Wooden|Woodblock,Drums|Percussion|Wood
+FX|Alarm,Sounds|Ambience & FX|Alarm
+FX|Alien,Sounds|Ambience & FX|Alien
+FX|Ambience,
+FX|Atmospheric,Sounds|Ambience & FX|Atmospheric
+FX|Bang,Sounds|Ambience & FX|Bang
+FX|Buzz,
+FX|Click,Sounds|Ambience & FX|Click
+FX|Feedback,Sounds|Ambience & FX|Feedback
+FX|Flange,Sounds|Ambience & FX|Flange
+FX|Glitch,Sounds|Ambience & FX|Glitch
+FX|Impact,Sounds|Ambience & FX|Impact
+FX|Lazer,
+FX|Metal,Sounds|Ambience & FX|Metal
+FX|Nature,Sounds|Ambience & FX|Nature
+FX|Noise,Sounds|Ambience & FX|Noise
+FX|Organic,
+FX|Passby,
+FX|Phaser,Sounds|Ambience & FX|Phaser
+FX|Ping,Sounds|Ambience & FX|Ping
+FX|Reverb,Sounds|Ambience & FX|Reverb
+FX|Robot,Sounds|Ambience & FX|Robot
+FX|SFX,
+FX|SciFi,
+FX|Scratch,Sounds|Ambience & FX|Scratch
+FX|Shimmer,
+FX|Shots,Sounds|Ambience & FX|Shots
+FX|Siren,Sounds|Ambience & FX|Siren
+FX|Strike,
+FX|Sweep,
+FX|Swell,Sounds|Ambience & FX|Swell
+FX|Vinyl,Sounds|Ambience & FX|Vinyl
+FX|Water,Sounds|Ambience & FX|Water
+FX|Whistle,
+FX|Zap,Sounds|Ambience & FX|Zap
+Foley|Winches & Gears,
+Instruments|Accordion,Sounds|Piano & Keys|Accordion
+Instruments|Acoustic Guitar,Sounds|Guitar & Plucked|Acoustic Guitar
+Instruments|Balalaika,Sounds|Strings|Balalaika
+Instruments|Band,Sounds|Band
+Instruments|Bass Guitar,Sounds|Bass|Electric Bass
+Instruments|Brass|Bugle,Sounds|Brass|Bugle
+Instruments|Brass|Euphonium,Sounds|Brass|Euphonium
+Instruments|Brass|Flugelhorn,Sounds|Brass|Flugelhorn
+Instruments|Brass|French Horn,Sounds|Brass|French Horn
+Instruments|Brass|Horn,Sounds|Brass|Horn
+Instruments|Brass|Trombone,Sounds|Brass|Trombone
+Instruments|Brass|Trumpet,Sounds|Brass|Trumpet
+Instruments|Brass|Tuba,Sounds|Brass|Tuba
+Instruments|Celesta,Sounds|Piano & Keys|Celesta
+Instruments|Classic Guitar,Sounds|Guitar & Plucked|Classical Guitar
+Instruments|Detuned,
+Instruments|Didgeridoo,Sounds|Woodwind|Didgeridoo
+Instruments|Downer,Sounds|Ambience & FX|Downer
+Instruments|Drop,Sounds|Ambience & FX|Drop
+Instruments|Electric Guitar,Sounds|Guitar & Plucked|Electric Guitar
+Instruments|Ethereal,
+Instruments|FM,Sounds|Synth|FM
+Instruments|Guitar,Sounds|Guitar & Plucked|Guitar
+Instruments|Harmonica,Sounds|Woodwind|Harmonica
+Instruments|Harmony,
+Instruments|Kalimba,Sounds|Mallets|Kalimba
+Instruments|Keys|Clavinet,Sounds|Piano & Keys|Clav
+Instruments|Keys|Harpsichord,Sounds|Piano & Keys|Harpsichord
+Instruments|Keys|Organ,Sounds|Piano & Keys|Organ
+Instruments|Keys|Piano,Sounds|Piano & Keys|Piano
+Instruments|Lapsteel,Sounds|Guitar & Plucked|Lapsteel
+Instruments|Lute,Sounds|Strings|Lute
+Instruments|Mallet|Glockenspiel,Sounds|Mallets|Glockenspiel
+Instruments|Mallet|Mallets,Sounds|Mallets
+Instruments|Mallet|Marimba,Sounds|Mallets|Marimba
+Instruments|Mallet|Vibraphone,Sounds|Mallets|Vibraphone
+Instruments|Mallet|Xylophone,Sounds|Mallets|Xylophone
+Instruments|Omnichord,Sounds|Synth|Omnichord
+Instruments|Orchestra,Sounds|Orchestra
+Instruments|Pink,
+Instruments|Reed|Bagpipes,Sounds|Woodwind|Bagpipes
+Instruments|Reed|Bassoon,Sounds|Woodwind|Bassoon
+Instruments|Reed|Clarinet,Sounds|Woodwind|Clarinet
+Instruments|Reed|Cor anglais,Sounds|Woodwind|Cor anglais
+Instruments|Reed|Oboe,Sounds|Woodwind|Oboe
+Instruments|Reed|Saxophone,Sounds|Woodwind|Sax
+Instruments|Shakuhachi,Sounds|Woodwind|Shakuhachi
+Instruments|Shehnai,Sounds|Woodwind|Shehnai
+Instruments|Sitar,Sounds|Strings|Sitar
+Instruments|Sound Types|Riser,Sounds|Ambience & FX|Riser
+Instruments|Strings|Cello,Sounds|Strings|Cello
+Instruments|Strings|Double Bass,Sounds|Strings|Double Bass
+Instruments|Strings|Harp,Sounds|Strings|Harp
+Instruments|Strings|Viola,Sounds|Strings|Viola
+Instruments|Strings|Violin,Sounds|Strings|Violin
+Instruments|Supersaw,Sounds|Synth|Supersaw
+Instruments|Synth|101,Sounds|Synth|101
+Instruments|Synth|303,Sounds|Synth|303
+Instruments|Synth|Bass,Sounds|Bass|Synth Bass
+Instruments|Synth|Bleep,Sounds|Synth|Bleep
+Instruments|Synth|Juno,Sounds|Synth|Juno
+Instruments|Synth|Lead,Sounds|Lead
+Instruments|Synth|MS10,Sounds|Synth|MS10
+Instruments|Synth|MS20,Sounds|Synth|MS20
+Instruments|Synth|Moog,Sounds|Synth|Moog
+Instruments|Synth|Plucked,Sounds|Guitar & Plucked|Synth Plucked
+Instruments|Synth|Reese,Sounds|Synth|Reese
+Instruments|Synth|Sub,Sounds|Synth|Sub
+Instruments|Synth|Waveform,Sounds|Synth|Waveform
+Instruments|Synth|Wavetable,Sounds|Synth|Wavetable
+Instruments|Synth|Wobble,Sounds|Synth|Wobble
+Instruments|Tops,
+Instruments|Tuned,
+Instruments|Ukelele,Sounds|Guitar & Plucked|Ukelele
+Instruments|Ukulele,Sounds|Guitar & Plucked|Ukelele
+Instruments|Wet,
+Instruments|White,
+Instruments|Woodwind|Flute,Sounds|Woodwind|Flute
+Instruments|Woodwind|Piccolo,Sounds|Woodwind|Piccolo
+Instruments|Woodwind|Recorder,Sounds|Woodwind|Recorder
+Styles|Acoustic,
+Styles|Afternoon,
+Styles|Alto,
+Styles|Analog,
+Styles|Angry,
+Styles|Arpeggiated,
+Styles|Atonal,
+Styles|Background,
+Styles|Baritone,
+Styles|Brassy,
+Styles|Breathy,
+Styles|Bridge,
+Styles|Bright,
+Styles|Build,
+Styles|Chord,
+Styles|Chorus,
+Styles|Cinematic,
+Styles|Classical,
+Styles|Clean,
+Styles|Clear,
+Styles|Confused,
+Styles|Construction Kit,
+Styles|Contralto,
+Styles|Dark,
+Styles|Day,
+Styles|Digital,
+Styles|Dirty,
+Styles|Dissonant,
+Styles|Distinct,
+Styles|Distorted,
+Styles|Drone,
+Styles|Dry,
+Styles|Dusty,
+Styles|Electronic,
+Styles|Ensemble,
+Styles|Fill,
+Styles|Film,
+Styles|Filter,
+Styles|Flat,
+Styles|Full,
+Styles|Gentle,
+Styles|Glissando,
+Styles|Groove,
+Styles|Happy,
+Styles|Harsh,
+Styles|Hook,
+Styles|Instrumental,
+Styles|Joyful,
+Styles|Layer,
+Styles|Legato,
+Styles|Long,
+Styles|Loud,
+Styles|Love,
+Styles|Melancholic,
+Styles|Mellow,
+Styles|Melodic,
+Styles|Melodious,
+Styles|Mezzo,
+Styles|Modular,
+Styles|Mono,
+Styles|Morning,
+Styles|Music,
+Styles|Natural,
+Styles|Night,
+Styles|Nylon,
+Styles|Pad,
+Styles|Piercing,
+Styles|Poly,
+Styles|Raucous,
+Styles|Reedy,
+Styles|Resonant,
+Styles|Reverse,
+Styles|Rich,
+Styles|Rounded,
+Styles|Sad,
+Styles|Saturated,
+Styles|Short,
+Styles|Shrill,
+Styles|Shuffle,
+Styles|Skank,
+Styles|Smooth,
+Styles|Soft,
+Styles|Soprano,
+Styles|Stab,
+Styles|Strident,
+Styles|Strong,
+Styles|Sustained,
+Styles|Swing,
+Styles|Syncopated,
+Styles|Tape,
+Styles|Tenor,
+Styles|Thick,
+Styles|Thin,
+Styles|Tight,
+Styles|Transition,
+Styles|Tremolo,
+Styles|Upbeat,
+Styles|Verse,
+Styles|Vibrato,
+Styles|Wah,
+Styles|Warm,
+Styles|Work,
+Untagged,
+Vocals|Acapella,
+Vocals|Adlibs,
+Vocals|Atmospheres,
+Vocals|Chants,
+Vocals|Choir|Female Choir,
+Vocals|Choir|Male Choir,
+Vocals|Choir|Mixed Choir,
+Vocals|Chop,
+Vocals|Falsetto,
+Vocals|Female,
+Vocals|Lyrics,
+Vocals|Male,
+Vocals|Phrase,
+Vocals|Rhyme,
+Vocals|Shout,
+Vocals|Solo,
+Vocals|Spoken,
+Vocals|Synthesized,
+Vocals|Vocoded,
+Vocals|Word,
