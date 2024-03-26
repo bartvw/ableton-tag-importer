@@ -105,7 +105,7 @@ class ADSRImporter:
                             keywords.add(f"Key|{mode}")
 
                 for tag in keywords:
-                    if xmp.add_keyword(file[1], tag):
+                    if xmp.add_tag(file[1], tag):
                         num_keywords_added += 1
                         if on_tag_added is not None:
                             on_tag_added(

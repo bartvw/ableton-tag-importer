@@ -9,12 +9,13 @@ DEFAULT_DB_PATH = os.path.expanduser("~/Library/Application Support/ADSR/adsr_1_
 DEFAULT_DIRECTORY = os.path.expanduser("~/Music/Ableton/User Library/Samples")
 MAPPING_CSV = "data.csv"
 
+
 class AbletonTagImporter(customtkinter.CTk):
     def __init__(self):
         super().__init__()
 
         self.title("Ableton Tag Importer")
-        self.geometry("900x500")
+        self.geometry("1100x600")
         self.grid_columnconfigure(0, weight=1)
         self.grid_columnconfigure(1, weight=1)
         self.grid_rowconfigure(2, weight=1)
@@ -23,7 +24,7 @@ class AbletonTagImporter(customtkinter.CTk):
         self.db3_path = os.path.expanduser(DEFAULT_DB_PATH)
         if not os.path.exists(self.db3_path):
             self.db3_path = None
-            
+
         self.directory_path = None
         self.mapping_list = []
         self.unmapped_tags = []
@@ -32,7 +33,9 @@ class AbletonTagImporter(customtkinter.CTk):
         self.load_mapping()
 
         # Path to db3 file
-        self.db3_label = customtkinter.CTkLabel(self, text="DB3 File Path: " + self.db3_path)
+        self.db3_label = customtkinter.CTkLabel(
+            self, text="DB3 File Path: " + self.db3_path
+        )
         self.db3_label.grid(row=0, column=0, pady=10)
         self.db3_button = customtkinter.CTkButton(
             self, text="Select...", command=self.open_db3_selection
@@ -59,8 +62,13 @@ class AbletonTagImporter(customtkinter.CTk):
         table_frame = customtkinter.CTkFrame(self)
         table_frame.grid(row=0, column=2, rowspan=3, sticky="nsew")
         self.table = tksheet.Sheet(
-            table_frame, headers=["Source", "Destination"], total_columns=2
+            table_frame,
+            headers=["Source", "Destination"],
+            total_columns=2,
+            show_row_index=False,
+            default_row_index_width=0,
         )
+        self.table.set_options(auto_resize_columns=400)
         self.table.pack(fill="both", expand=True)
         self.table.enable_bindings(
             "single_select",
@@ -89,7 +97,7 @@ class AbletonTagImporter(customtkinter.CTk):
         self.logbox.configure(state="normal")
         self.logbox.insert("end", message + "\n")
         self.logbox.configure(state="disabled")
-    
+
     def table_updated(self, event):
         self.save_mapping()
 
@@ -115,22 +123,25 @@ class AbletonTagImporter(customtkinter.CTk):
 
     def open_directory_selection(self):
         self.directory_path = customtkinter.filedialog.askdirectory(
-            initialdir=self.directory_path if self.directory_path is not None else DEFAULT_DIRECTORY,
-            mustexist=True
+            initialdir=(
+                self.directory_path
+                if self.directory_path is not None
+                else DEFAULT_DIRECTORY
+            ),
+            mustexist=True,
         )
         self.directory_label.configure(text="Directory to Sync: " + self.directory_path)
         self.sync(dry_run=True)
         self.sync_button.configure(state="normal")
-        
 
     def open_db3_selection(self):
         self.db3_path = customtkinter.filedialog.askopenfilename(
             initialfile=os.path.basename(self.db3_path),
             initialdir=os.path.dirname(self.db3_path),
-            filetypes=[("DB3 Files", "*.db3")]
+            filetypes=[("DB3 Files", "*.db3")],
         )
         self.db3_label.configure(text="DB3 File Path: " + self.db3_path)
-        
+
     def log_tag_event(self, event):
         self.log(f"Added tag '{event['tag']}' to '{event['file_path']}'")
 
@@ -138,12 +149,14 @@ class AbletonTagImporter(customtkinter.CTk):
         if not self.directory_path:
             self.log("No directory selected")
             return
-        
+
         mapping = {row[0]: row[1] for row in self.mapping_list}
         sync = ADSRImporter(self.db3_path, mapping)
-        
+
         # TODO: We should really run this on a separate thread
-        num_imported_tags, unmapped = sync.sync_directory(self.directory_path, dry_run=dry_run, on_tag_added=self.log_tag_event)
+        num_imported_tags, unmapped = sync.sync_directory(
+            self.directory_path, dry_run=dry_run, on_tag_added=self.log_tag_event
+        )
 
         for tag in unmapped:
             if tag not in mapping:
@@ -163,7 +176,7 @@ class AbletonTagImporter(customtkinter.CTk):
         self.log(f"{num_imported_tags} tags imported")
         self.log("Unmapped Tags:")
         for tag in unmapped:
-            self.log(" * " + tag) 
+            self.log(" * " + tag)
 
         print(unmapped)
 
@@ -177,6 +190,7 @@ class AbletonTagImporter(customtkinter.CTk):
         else:
             self.mapping_list.append([tag, None])
             self.mapping_changed = True
+
 
 app = AbletonTagImporter()
 app.mainloop()

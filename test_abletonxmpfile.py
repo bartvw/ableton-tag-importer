@@ -32,11 +32,11 @@ class TestAbletonXMPFile(unittest.TestCase):
         self.assertFalse(xmp_file.is_changed)
         self.assertIsNotNone(xmp_file.root)
 
-    def test_add_keyword(self):
+    def test_add_tag(self):
         # Test adding a keyword to an existing item
         file_path = "test_file.wav"
         keyword = "music"
-        self.xmp_file.add_keyword(file_path, keyword)
+        self.xmp_file.add_tag(file_path, keyword)
         item = self.xmp_file.root.xpath(
             f"//ablFR:items/rdf:Bag/rdf:li[ablFR:filePath='{file_path}']",
             namespaces=self.xmp_file.nsmap,
@@ -53,8 +53,8 @@ class TestAbletonXMPFile(unittest.TestCase):
         # Test adding the same keyword twice to an existing item
         file_path = "test_file '1>.wav"
         keyword = "music"
-        self.xmp_file.add_keyword(file_path, keyword)
-        self.xmp_file.add_keyword(file_path, keyword)
+        self.xmp_file.add_tag(file_path, keyword)
+        self.xmp_file.add_tag(file_path, keyword)
         items = self.xmp_file.root.xpath(
             f"//ablFR:items/rdf:Bag/rdf:li",
             namespaces=self.xmp_file.nsmap,
@@ -76,11 +76,11 @@ class TestAbletonXMPFile(unittest.TestCase):
         self.assertEqual(keywords[0].text, keyword)
         self.assertTrue(self.xmp_file.is_changed)
 
-    def test_add_keyword_to_new_item(self):
+    def test_add_tag_to_new_item(self):
         # Test adding a keyword to a new item
         file_path = "new_file.wav"
         keyword = "sound"
-        self.xmp_file.add_keyword(file_path, keyword)
+        self.xmp_file.add_tag(file_path, keyword)
         item = self.xmp_file.root.xpath(
             f"//ablFR:items/rdf:Bag/rdf:li[ablFR:filePath='{file_path}']",
             namespaces=self.xmp_file.nsmap,

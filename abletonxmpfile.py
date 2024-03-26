@@ -42,7 +42,7 @@ class AbletonXMPFile:
                 """
             self.root = etree.XML(template, self.parser)
 
-    def add_keyword(self, file_path, keyword):
+    def add_tag(self, file_path, keyword):
         added = False
         item_template = f"""
         <rdf:li rdf:parseType="Resource" 
