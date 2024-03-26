@@ -56,17 +56,18 @@ class AbletonXMPFile:
         </rdf:li>
         """
 
-        try:
-            items = self.root.xpath(
-                f"//ablFR:items/rdf:Bag/rdf:li[ablFR:filePath='{quoteattr(file_path)}']",
-                namespaces=self.nsmap,
-            )
-        except etree.XPathEvalError:
-            print(f"Error: {file_path}")
-            return False
-
-        if items:
-            item = items[0]
+        items = self.root.xpath(
+            f"//ablFR:items/rdf:Bag/rdf:li",
+            namespaces=self.nsmap,
+        )
+        # collect existing filepaths
+        existing_filepaths = [
+            item.xpath("ablFR:filePath", namespaces=self.nsmap)[0].text
+            for item in items
+        ]
+        # check if the file path already exists
+        if file_path in existing_filepaths:
+            item = items[existing_filepaths.index(file_path)]
         else:
             item = etree.XML(item_template, self.parser)
             self.root.xpath(
