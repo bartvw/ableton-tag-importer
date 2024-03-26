@@ -52,7 +52,7 @@ class ADSRImporter:
 
     def sync_directory(self, folder_path, dry_run=False, on_tag_added=None):
         unmapped_tags = set()
-        num_keywords_added = 0
+        num_tags_added = 0
 
         self.cursor.execute(
             "SELECT id,path FROM folders where path LIKE ?;", (f"{folder_path}%",)
@@ -68,7 +68,7 @@ class ADSRImporter:
             )
             for file in self.cursor.fetchall():
 
-                keywords = set()
+                tags = set()
                 self.cursor.execute(
                     "SELECT tag_id FROM file_tags WHERE file_id = ?;",
                     (file[0],),
@@ -78,14 +78,14 @@ class ADSRImporter:
                 ]:
                     if tag_name in self.tag_map and self.tag_map[tag_name]:
                         tag = self.tag_map[tag_name]
-                        keywords.add(tag)
+                        tags.add(tag)
                     else:
                         unmapped_tags.add(tag_name)
 
                 if file[2] == 1:
-                    keywords.add("Type|Loop")
+                    tags.add("Type|Loop")
                 else:
-                    keywords.add("Type|One Shot")
+                    tags.add("Type|One Shot")
 
                 # Get the key and tempo from the file
                 self.cursor.execute(
@@ -101,12 +101,12 @@ class ADSRImporter:
                     else:
                         root, mode = self.KEY_MAP[result[0]]
                         if root is not None and mode is not None:
-                            keywords.add(f"Key|{root}")
-                            keywords.add(f"Key|{mode}")
+                            tags.add(f"Key|{root}")
+                            tags.add(f"Key|{mode}")
 
-                for tag in keywords:
+                for tag in tags:
                     if xmp.add_tag(file[1], tag):
-                        num_keywords_added += 1
+                        num_tags_added += 1
                         if on_tag_added is not None:
                             on_tag_added(
                                 {"file_path": f"{folder[1]}/{file[1]}", "tag": tag}
@@ -118,4 +118,4 @@ class ADSRImporter:
         self.cursor.close()
         self.conn.close()
 
-        return (num_keywords_added, list(unmapped_tags))
+        return (num_tags_added, list(unmapped_tags))

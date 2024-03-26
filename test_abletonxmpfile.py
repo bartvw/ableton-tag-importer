@@ -33,28 +33,28 @@ class TestAbletonXMPFile(unittest.TestCase):
         self.assertIsNotNone(xmp_file.root)
 
     def test_add_tag(self):
-        # Test adding a keyword to an existing item
+        # Test adding a tag to an existing item
         file_path = "test_file.wav"
-        keyword = "music"
-        self.xmp_file.add_tag(file_path, keyword)
+        tag = "music"
+        self.xmp_file.add_tag(file_path, tag)
         item = self.xmp_file.root.xpath(
             f"//ablFR:items/rdf:Bag/rdf:li[ablFR:filePath='{file_path}']",
             namespaces=self.xmp_file.nsmap,
         )[0]
-        keywords = item.xpath(
+        tags = item.xpath(
             "ablFR:keywords/rdf:Bag/rdf:li",
             namespaces=self.xmp_file.nsmap,
         )
-        self.assertEqual(len(keywords), 1)
-        self.assertEqual(keywords[0].text, keyword)
+        self.assertEqual(len(tags), 1)
+        self.assertEqual(tags[0].text, tag)
         self.assertTrue(self.xmp_file.is_changed)
 
-    def test_add_same_keyword_twice(self):
-        # Test adding the same keyword twice to an existing item
+    def test_add_same_tag_twice(self):
+        # Test adding the same tag twice to an existing item
         file_path = "test_file '1>.wav"
-        keyword = "music"
-        self.xmp_file.add_tag(file_path, keyword)
-        self.xmp_file.add_tag(file_path, keyword)
+        tag = "music"
+        self.xmp_file.add_tag(file_path, tag)
+        self.xmp_file.add_tag(file_path, tag)
         items = self.xmp_file.root.xpath(
             f"//ablFR:items/rdf:Bag/rdf:li",
             namespaces=self.xmp_file.nsmap,
@@ -68,29 +68,29 @@ class TestAbletonXMPFile(unittest.TestCase):
         ]
         self.assertEqual(len(items), 1)
 
-        keywords = items[0].xpath(
+        tags = items[0].xpath(
             "ablFR:keywords/rdf:Bag/rdf:li",
             namespaces=self.xmp_file.nsmap,
         )
-        self.assertEqual(len(keywords), 1)
-        self.assertEqual(keywords[0].text, keyword)
+        self.assertEqual(len(tags), 1)
+        self.assertEqual(tags[0].text, tag)
         self.assertTrue(self.xmp_file.is_changed)
 
     def test_add_tag_to_new_item(self):
-        # Test adding a keyword to a new item
+        # Test adding a tag to a new item
         file_path = "new_file.wav"
-        keyword = "sound"
-        self.xmp_file.add_tag(file_path, keyword)
+        tag = "sound"
+        self.xmp_file.add_tag(file_path, tag)
         item = self.xmp_file.root.xpath(
             f"//ablFR:items/rdf:Bag/rdf:li[ablFR:filePath='{file_path}']",
             namespaces=self.xmp_file.nsmap,
         )[0]
-        keywords = item.xpath(
+        tags = item.xpath(
             "ablFR:keywords/rdf:Bag/rdf:li",
             namespaces=self.xmp_file.nsmap,
         )
-        self.assertEqual(len(keywords), 1)
-        self.assertEqual(keywords[0].text, keyword)
+        self.assertEqual(len(tags), 1)
+        self.assertEqual(tags[0].text, tag)
         self.assertTrue(self.xmp_file.is_changed)
 
     def test_dump(self):
