@@ -14,5 +14,18 @@ Note that it's not required to fill the entire translation table. Tags without a
 
 ## Known Issues
 
+* Only tested on Mac OS currently
 * The GUI needs some work to make useable. 
 * The sync is performed on the UI thread, which freezes the application. 
+* If you get a blank window, try using the latest Python version from https://www.python.org/downloads/
+
+## How to run
+
+1. Clone this repository
+2. Initialize virtual environment and install dependencies
+
+       virtualenv .env && source .env/bin/activate && pip install -r requirements.txt
+
+3. Run the application: 
+
+       python importer.py
