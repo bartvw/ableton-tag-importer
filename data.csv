@@ -1,3 +1,4 @@
+Drums,
 Drums|707,Drum Kit|707
 Drums|808,Drum Kit|808
 Drums|909,Drum Kit|909
@@ -9,8 +10,8 @@ Drums|Clap,Drums|Clap
 Drums|Cuica,Drums|Percussion|Cuica
 Drums|Cymbals|Crash,Drums|Cymbal|Crash
 Drums|Cymbals|HiHat,Drums|Hihat
-Drums|Cymbals|HiHat Closed,Drums|Closed Hihat
-Drums|Cymbals|HiHat Open,
+Drums|Cymbals|HiHat Closed,Drums|Hihat|Closed Hihat
+Drums|Cymbals|HiHat Open,Drums|Hihat|Open Hihat
 Drums|Cymbals|Ride,Drums|Cymbal|Crash
 Drums|Darabuka,Drums|Percussion|Darabuka
 Drums|Drum Machine,
@@ -63,7 +64,7 @@ FX|Phaser,Sounds|Ambience & FX|Phaser
 FX|Ping,Sounds|Ambience & FX|Ping
 FX|Reverb,Sounds|Ambience & FX|Reverb
 FX|Robot,Sounds|Ambience & FX|Robot
-FX|SFX,
+FX|SFX,Sounds|Ambience|Sound FX
 FX|SciFi,
 FX|Scratch,Sounds|Ambience & FX|Scratch
 FX|Shimmer,
@@ -76,12 +77,14 @@ FX|Vinyl,Sounds|Ambience & FX|Vinyl
 FX|Water,Sounds|Ambience & FX|Water
 FX|Whistle,
 FX|Zap,Sounds|Ambience & FX|Zap
+Foley|Weather,Sounds|Foley|Weather
 Foley|Winches & Gears,
 Instruments|Accordion,Sounds|Piano & Keys|Accordion
 Instruments|Acoustic Guitar,Sounds|Guitar & Plucked|Acoustic Guitar
 Instruments|Balalaika,Sounds|Strings|Balalaika
 Instruments|Band,Sounds|Band
 Instruments|Bass Guitar,Sounds|Bass|Electric Bass
+Instruments|Brass,
 Instruments|Brass|Bugle,Sounds|Brass|Bugle
 Instruments|Brass|Euphonium,Sounds|Brass|Euphonium
 Instruments|Brass|Flugelhorn,Sounds|Brass|Flugelhorn
@@ -103,6 +106,7 @@ Instruments|Guitar,Sounds|Guitar & Plucked|Guitar
 Instruments|Harmonica,Sounds|Woodwind|Harmonica
 Instruments|Harmony,
 Instruments|Kalimba,Sounds|Mallets|Kalimba
+Instruments|Keys,Sounds|Piano & Keys
 Instruments|Keys|Clavinet,Sounds|Piano & Keys|Clav
 Instruments|Keys|Harpsichord,Sounds|Piano & Keys|Harpsichord
 Instruments|Keys|Organ,Sounds|Piano & Keys|Organ
@@ -127,12 +131,14 @@ Instruments|Shakuhachi,Sounds|Woodwind|Shakuhachi
 Instruments|Shehnai,Sounds|Woodwind|Shehnai
 Instruments|Sitar,Sounds|Strings|Sitar
 Instruments|Sound Types|Riser,Sounds|Ambience & FX|Riser
+Instruments|Strings,Sounds|Strings
 Instruments|Strings|Cello,Sounds|Strings|Cello
 Instruments|Strings|Double Bass,Sounds|Strings|Double Bass
 Instruments|Strings|Harp,Sounds|Strings|Harp
 Instruments|Strings|Viola,Sounds|Strings|Viola
 Instruments|Strings|Violin,Sounds|Strings|Violin
 Instruments|Supersaw,Sounds|Synth|Supersaw
+Instruments|Synth,Sounds|Synth
 Instruments|Synth|101,Sounds|Synth|101
 Instruments|Synth|303,Sounds|Synth|303
 Instruments|Synth|Bass,Sounds|Bass|Synth Bass
@@ -260,6 +266,7 @@ Styles|Wah,
 Styles|Warm,
 Styles|Work,
 Untagged,
+Vocals,Sounds|Voice
 Vocals|Acapella,
 Vocals|Adlibs,
 Vocals|Atmospheres,
