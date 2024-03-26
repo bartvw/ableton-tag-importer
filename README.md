@@ -11,3 +11,8 @@ Here's how it works:
 6. Repeat steps 4 and 5 if necessary. 
 
 Note that it's not required to fill the entire translation table. Tags without a translation will simply not be imported. 
+
+## Known Issues
+
+* The GUI needs some work to make useable. 
+* The sync is performed on the UI thread, which freezes the application. 
