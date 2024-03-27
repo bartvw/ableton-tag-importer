@@ -95,7 +95,7 @@ class ADSRImporter:
                 # fetch the result
                 result = self.cursor.fetchone()
 
-                if result[0] != 0:
+                if result and result[0] != 0:
                     if result[0] not in self.KEY_MAP:
                         print(f"Unknown key: {result[0]}")
                     else:

@@ -16,9 +16,10 @@ class AbletonTagImporter(customtkinter.CTk):
 
         self.title("Ableton Tag Importer")
         self.geometry("1100x600")
-        self.grid_columnconfigure(0, weight=1)
-        self.grid_columnconfigure(1, weight=1)
+        self.grid_columnconfigure((0,2), weight=1)
+        self.grid_columnconfigure(2, minsize=500)
         self.grid_rowconfigure(2, weight=1)
+        # self.grid_rowconfigure(4, weight=0)
 
         self.csv_file = MAPPING_CSV
         self.db3_path = os.path.expanduser(DEFAULT_DB_PATH)
@@ -32,15 +33,16 @@ class AbletonTagImporter(customtkinter.CTk):
 
         self.load_mapping()
 
+        
         # Path to db3 file
         self.db3_label = customtkinter.CTkLabel(
-            self, text="DB3 File Path: " + self.db3_path
+            self, text="DB3 File Path: " + self.db3_path, wraplength=200
         )
-        self.db3_label.grid(row=0, column=0, pady=10)
+        self.db3_label.grid(row=0, column=0, padx=10, pady=10)
         self.db3_button = customtkinter.CTkButton(
             self, text="Select...", command=self.open_db3_selection
         )
-        self.db3_button.grid(row=0, column=1, pady=10)
+        self.db3_button.grid(row=0, column=1, padx=10, pady=10)
 
         # Directory picker
         self.directory_label = customtkinter.CTkLabel(self, text="Directory to Sync: ")
@@ -59,17 +61,17 @@ class AbletonTagImporter(customtkinter.CTk):
         self.sync_button.configure(state="disabled")
         self.sync_button.grid(row=3, column=0, columnspan=2, pady=10)
 
-        table_frame = customtkinter.CTkFrame(self)
-        table_frame.grid(row=0, column=2, rowspan=3, sticky="nsew")
+        table_frame = customtkinter.CTkFrame(self, bg_color="red")
+        table_frame.grid(row=0, column=2, rowspan=4, sticky="nsew", padx=10, pady=10)
+        table_frame.grid_columnconfigure(0, weight=1)
+        table_frame.grid_rowconfigure(0, weight=1)
         self.table = tksheet.Sheet(
             table_frame,
             headers=["Source", "Destination"],
-            total_columns=2,
-            show_row_index=False,
-            default_row_index_width=0,
+            total_columns=2
         )
-        self.table.set_options(auto_resize_columns=400)
-        self.table.pack(fill="both", expand=True)
+        
+        self.table.grid(row=0, column=0, sticky="nsew")
         self.table.enable_bindings(
             "single_select",
             "row_select",
@@ -92,6 +94,7 @@ class AbletonTagImporter(customtkinter.CTk):
 
         self.table.set_sheet_data(self.mapping_list)
         self.table.bind("<<SheetModified>>", self.table_updated)
+        self.table.set_options(auto_resize_columns=200)
 
     def log(self, message):
         self.logbox.configure(state="normal")
